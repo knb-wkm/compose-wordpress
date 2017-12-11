@@ -15,7 +15,7 @@ services:
       - ./html_data:/var/www/html
 
   mysql:
-    image: centos/mariadb
+    image: mysql:5.7
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
@@ -24,4 +24,4 @@ services:
       MYSQL_PASSWORD: password
     volumes:
       - ./db_data:/var/lib/mysql
-      - ./db_log:/var/log/mariadb
+      - ./db_log:/var/log/mysql
